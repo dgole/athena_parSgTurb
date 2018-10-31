@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/Athena/!svn/ver/1442/trunk/tst/1D-mhd
+END
+athinput.brio-wu
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.brio-wu
+END
+run.cpaw1d
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/run.cpaw1d
+END
+run.test
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/run.test
+END
+run.linear_wave1d
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1420/trunk/tst/1D-mhd/run.linear_wave1d
+END
+athinput.rj1a
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj1a
+END
+athinput.rj2a
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1442/trunk/tst/1D-mhd/athinput.rj2a
+END
+athinput.rj1b
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj1b
+END
+athinput.rj3a
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj3a
+END
+athinput.rj2b
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj2b
+END
+athinput.cshock1d
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1210/trunk/tst/1D-mhd/athinput.cshock1d
+END
+athinput.rj4a
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj4a
+END
+athinput.rj3b
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj3b
+END
+athinput.rj4b
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj4b
+END
+athinput.rj4c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj4c
+END
+athinput.rj4d
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.rj4d
+END
+athinput.linear_wave1d-3lev1
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.linear_wave1d-3lev1
+END
+athinput.cpaw1d
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/Athena/!svn/ver/1439/trunk/tst/1D-mhd/athinput.cpaw1d
+END
+athinput.torrilhon
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/Athena/!svn/ver/1058/trunk/tst/1D-mhd/athinput.torrilhon
+END
+athinput.linear_wave1d
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/Athena/!svn/ver/1413/trunk/tst/1D-mhd/athinput.linear_wave1d
+END

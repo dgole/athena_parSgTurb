@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/Athena/!svn/ver/1086/trunk/tst/2D-sr-mhd
+END
+athinput.brio-wu
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1070/trunk/tst/2D-sr-mhd/athinput.brio-wu
+END
+athinput.blast
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1073/trunk/tst/2D-sr-mhd/athinput.blast
+END
+athinput.current-sheet
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/Athena/!svn/ver/1071/trunk/tst/2D-sr-mhd/athinput.current-sheet
+END
+athinput.jet
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/Athena/!svn/ver/1086/trunk/tst/2D-sr-mhd/athinput.jet
+END

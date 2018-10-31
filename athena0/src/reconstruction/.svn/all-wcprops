@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/Athena/!svn/ver/1524/trunk/src/reconstruction
+END
+esystem_prim.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/Athena/!svn/ver/1230/trunk/src/reconstruction/esystem_prim.c
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1524/trunk/src/reconstruction/Makefile.in
+END
+lr_states_p3c.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/Athena/!svn/ver/1524/trunk/src/reconstruction/lr_states_p3c.c
+END
+lr_states_dc.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/Athena/!svn/ver/1415/trunk/src/reconstruction/lr_states_dc.c
+END
+lr_states_plm.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/Athena/!svn/ver/1433/trunk/src/reconstruction/lr_states_plm.c
+END
+lr_states_prim2.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/Athena/!svn/ver/1433/trunk/src/reconstruction/lr_states_prim2.c
+END
+lr_states_prim3.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/Athena/!svn/ver/1433/trunk/src/reconstruction/lr_states_prim3.c
+END
+lr_states_ppm.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/Athena/!svn/ver/1433/trunk/src/reconstruction/lr_states_ppm.c
+END
+prototypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/Athena/!svn/ver/1230/trunk/src/reconstruction/prototypes.h
+END

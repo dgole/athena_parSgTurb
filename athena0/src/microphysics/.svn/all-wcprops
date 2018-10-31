@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/Athena/!svn/ver/1519/trunk/src/microphysics
+END
+resistivity.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1474/trunk/src/microphysics/resistivity.c
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1515/trunk/src/microphysics/Makefile.in
+END
+conduction.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/Athena/!svn/ver/1488/trunk/src/microphysics/conduction.c
+END
+cool_solver.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1519/trunk/src/microphysics/cool_solver.c
+END
+get_eta.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/Athena/!svn/ver/1375/trunk/src/microphysics/get_eta.c
+END
+integrate_diffusion.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/Athena/!svn/ver/1415/trunk/src/microphysics/integrate_diffusion.c
+END
+new_dt_diff.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1422/trunk/src/microphysics/new_dt_diff.c
+END
+cool.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/Athena/!svn/ver/1238/trunk/src/microphysics/cool.c
+END
+viscosity.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1487/trunk/src/microphysics/viscosity.c
+END
+integrate_cooling.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/Athena/!svn/ver/1519/trunk/src/microphysics/integrate_cooling.c
+END
+prototypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/Athena/!svn/ver/1515/trunk/src/microphysics/prototypes.h
+END

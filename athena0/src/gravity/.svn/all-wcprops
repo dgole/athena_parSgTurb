@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/Athena/!svn/ver/1515/trunk/src/gravity
+END
+selfg_fft.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/Athena/!svn/ver/1392/trunk/src/gravity/selfg_fft.c
+END
+selfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/Athena/!svn/ver/1392/trunk/src/gravity/selfg.c
+END
+selfg_multigrid.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/Athena/!svn/ver/1237/trunk/src/gravity/selfg_multigrid.c
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/Athena/!svn/ver/1299/trunk/src/gravity/Makefile.in
+END
+selfg_fft_obc.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/Athena/!svn/ver/1392/trunk/src/gravity/selfg_fft_obc.c
+END
+bvals_grav.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1515/trunk/src/gravity/bvals_grav.c
+END
+selfg_fft_disk.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1392/trunk/src/gravity/selfg_fft_disk.c
+END
+prototypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Athena/!svn/ver/1318/trunk/src/gravity/prototypes.h
+END

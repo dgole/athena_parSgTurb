@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/Athena/!svn/ver/1442/trunk/tst/1D-hydro
+END
+athinput.noh
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.noh
+END
+athinput.sod
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/Athena/!svn/ver/1442/trunk/tst/1D-hydro/athinput.sod
+END
+athinput.sod-lw
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.sod-lw
+END
+athinput.leveque
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.leveque
+END
+athinput.slow-moving-shock
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.slow-moving-shock
+END
+athinput.sod-toro
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.sod-toro
+END
+athinput.linear_wave1d-3lev1
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.linear_wave1d-3lev1
+END
+run.linear_wave1d
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/Athena/!svn/ver/1420/trunk/tst/1D-hydro/run.linear_wave1d
+END
+athinput.twoibw
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.twoibw
+END
+athinput.shu-osher
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.shu-osher
+END
+athinput.pgflow
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/Athena/!svn/ver/195/trunk/tst/1D-hydro/athinput.pgflow
+END
+athinput.einfeldt1203
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.einfeldt1203
+END
+athinput.linear_wave1d
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/Athena/!svn/ver/1413/trunk/tst/1D-hydro/athinput.linear_wave1d
+END
+athinput.einfeldt1125
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/Athena/!svn/ver/1058/trunk/tst/1D-hydro/athinput.einfeldt1125
+END
