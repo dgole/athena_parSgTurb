@@ -1,0 +1,120 @@
+conduction.o: conduction.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h prototypes.h ../copyright.h ../config.h ../prototypes.h \
+ ../copyright.h ../config.h ../fftsrc/prototypes.h ../fftsrc/fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h ../gravity/prototypes.h \
+ ../gravity/../copyright.h ../gravity/../config.h ../integrators/prototypes.h \
+ ../integrators/../copyright.h ../integrators/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+cool.o: cool.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h prototypes.h ../copyright.h ../config.h ../prototypes.h \
+ ../copyright.h ../config.h ../fftsrc/prototypes.h ../fftsrc/fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h ../gravity/prototypes.h \
+ ../gravity/../copyright.h ../gravity/../config.h ../integrators/prototypes.h \
+ ../integrators/../copyright.h ../integrators/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+integrate_diffusion.o: integrate_diffusion.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h ../prototypes.h ../copyright.h ../config.h ../fftsrc/prototypes.h \
+ ../fftsrc/fft_3d.h /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h \
+ ../gravity/prototypes.h ../gravity/../copyright.h ../gravity/../config.h \
+ ../integrators/prototypes.h ../integrators/../copyright.h \
+ ../integrators/../config.h ../microphysics/prototypes.h \
+ ../microphysics/../copyright.h ../microphysics/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+integrate_cooling.o: integrate_cooling.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h ../prototypes.h ../copyright.h ../config.h ../fftsrc/prototypes.h \
+ ../fftsrc/fft_3d.h /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h \
+ ../gravity/prototypes.h ../gravity/../copyright.h ../gravity/../config.h \
+ ../integrators/prototypes.h ../integrators/../copyright.h \
+ ../integrators/../config.h ../microphysics/prototypes.h \
+ ../microphysics/../copyright.h ../microphysics/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+cool_solver.o: cool_solver.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h ../prototypes.h ../copyright.h ../config.h ../fftsrc/prototypes.h \
+ ../fftsrc/fft_3d.h /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h \
+ ../gravity/prototypes.h ../gravity/../copyright.h ../gravity/../config.h \
+ ../integrators/prototypes.h ../integrators/../copyright.h \
+ ../integrators/../config.h ../microphysics/prototypes.h \
+ ../microphysics/../copyright.h ../microphysics/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+get_eta.o: get_eta.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h prototypes.h ../copyright.h ../config.h ../prototypes.h \
+ ../copyright.h ../config.h ../fftsrc/prototypes.h ../fftsrc/fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h ../gravity/prototypes.h \
+ ../gravity/../copyright.h ../gravity/../config.h ../integrators/prototypes.h \
+ ../integrators/../copyright.h ../integrators/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+new_dt_diff.o: new_dt_diff.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h prototypes.h ../copyright.h ../config.h ../prototypes.h \
+ ../copyright.h ../config.h ../fftsrc/prototypes.h ../fftsrc/fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h ../gravity/prototypes.h \
+ ../gravity/../copyright.h ../gravity/../config.h ../integrators/prototypes.h \
+ ../integrators/../copyright.h ../integrators/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+resistivity.o: resistivity.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h prototypes.h ../copyright.h ../config.h ../prototypes.h \
+ ../copyright.h ../config.h ../fftsrc/prototypes.h ../fftsrc/fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h ../gravity/prototypes.h \
+ ../gravity/../copyright.h ../gravity/../config.h ../integrators/prototypes.h \
+ ../integrators/../copyright.h ../integrators/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h
+viscosity.o: viscosity.c ../copyright.h ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../globals.h prototypes.h ../copyright.h ../config.h ../prototypes.h \
+ ../copyright.h ../config.h ../fftsrc/prototypes.h ../fftsrc/fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h ../gravity/prototypes.h \
+ ../gravity/../copyright.h ../gravity/../config.h ../integrators/prototypes.h \
+ ../integrators/../copyright.h ../integrators/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h

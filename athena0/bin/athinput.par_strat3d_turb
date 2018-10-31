@@ -95,8 +95,8 @@ tshuf           = 1.e20     # time interval to shuffle the particles
 omega           = 1.0       # angular velocity of rotation
 iso_csound      = 1.0       # sound speed
 
-tsmin           = 1.      # stopping time for smallest particles
-tsmax           = 1.       # stopping time for largest particles
+tsmin           = 0.1      # stopping time for smallest particles
+tsmax           = 0.1      # stopping time for largest particles
 tscrit          = 0.01      # critical stopping time below which needs to switch integrator
 hparmax         = 0.02      # initial scaleheight for smallest particles
 hparmin         = 0.02      # initial scaleheight for largest particles
@@ -118,7 +118,7 @@ nlis            = 256       # number of particles in the particle list output
 kforce          = 0         # whether forcing is done in k space (1: forcing in k space)
 alpha_in        = 1.e-4     # input alpha (only for kforce = 0)
 
-dedt            = 1.1e-3    # energy input rate
+dedt            = 9.e-5    # energy input rate
 dtdrive         = 0.001     # time interval between drive
 klow            = 1.0       # low k cut-off in spectrum
 khigh           = 2.0      # high k cut-off in spectrum (recommend Nx/2)

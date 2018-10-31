@@ -20,7 +20,7 @@
  *  (user modified via configure) */
 
 /* Version identifier when configure was last run */
-#define CONFIGURE_DATE "Tue Oct 30 11:57:02 MDT 2018"
+#define CONFIGURE_DATE "Wed Oct 31 12:28:43 CDT 2018"
 
 /* Problem generator with which Athena is compiled */
 #define A_PROBLEM "par_strat3d_turb"
@@ -50,11 +50,11 @@
 
 /* Particles */
 #define PARTICLES
-#define NO_FEEDBACK
+#define FEEDBACK
 
 /* Particle self-gravity */
-#define NO_PARTICLE_SELF_GRAVITY
-#define PARTICLE_SELF_GRAVITY_NONE
+#define PARTICLE_SELF_GRAVITY
+#define PARTICLE_SELF_GRAVITY_USING_FFT_DISK
 
 /* implicit cooling */
 #define NO_COOLING
