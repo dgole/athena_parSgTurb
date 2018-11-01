@@ -10,7 +10,7 @@ run     = /usr/peyton/openmpi/bin/mpirun -np 2 athena -i ../tst/particle/athinpu
 <job>
 
 problem_id      = Par_Strat3d    # problem ID: basename of output filenames
-maxout          = 7              # Output blocks number from 1 -> maxout
+maxout          = 8              # Output blocks number from 1 -> maxout
 num_domains     = 1              # number of Domains in Mesh
 
 <output1>
@@ -50,6 +50,11 @@ id      = dpar
 dt      = 0.1
 num     = 0
 
+<output8>
+out_fmt = tab
+out     = prim
+dt      = 1.0
+
 <time>
 
 cour_no         = 0.4      # The Courant, Friedrichs, & Lewy (CFL) Number
@@ -65,7 +70,7 @@ bc_ix1          = 4         # inner-I (X) boundary flag (periodic)
 bc_ox1          = 4         # outer-I (X) boundary flag (periodic)
 NGrid_x1        = 8
 
-Nx2             = 128       # Number of zones in X2-direction
+Nx2             = 128      # Number of zones in X2-direction
 x2min           = -0.1      # minimum value of X2
 x2max           = 0.1       # maximum value of X2
 bc_ix2          = 4         # inner-J (Y) boundary flag (periodic)
@@ -116,7 +121,7 @@ ntrack          = 8         # number of particles for tracking
 nlis            = 256       # number of particles in the particle list output
 
 kforce          = 0         # whether forcing is done in k space (1: forcing in k space)
-alpha_in        = 1.e-4     # input alpha (only for kforce = 0)
+alpha_in        = 1.e-2     # input alpha (only for kforce = 0)
 
 dedt            = 9.e-5    # energy input rate
 dtdrive         = 0.001     # time interval between drive
