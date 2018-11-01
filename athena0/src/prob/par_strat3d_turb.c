@@ -6,7 +6,7 @@
  *
  * PURPOSE: Problem generator for non-linear streaming instability in stratified
  *   disks. This code works in 3D ONLY. Isothermal eos is assumed, and the value
- *   etavk/iso_sound is fixed. MPI domain decomposition in x is allowed, but 
+ *   etavk/iso_sound is fixed. MPI domain decomposition in x is allowed, but
  *   not in z.
  *
  * Perturbation modes:
@@ -49,7 +49,7 @@
 
 /* Uncomment the following define to drive the flow in an impulsive manner
    as was done originally.  Restarts for this mode not yet implemented! */
-#define IMPULSIVE_DRIVING 
+#define IMPULSIVE_DRIVING
 
 /* KEEP SEMI-COLONS OUT OF THESE PRE-PROCESSOR DIRECTIVES! */
 /* FFT indexing Nfast=k, Nmid=j, Nslow=i (opposite to Athena)
@@ -78,7 +78,7 @@ static Real ***dv1=NULL, ***dv2=NULL, ***dv3=NULL;
 /* Cutoff wavenumbers, G&O spect peak, power law spect exponent, 2 pi/L */
 static Real klow,khigh,kpeak,expo,dkx;
 /* Energy injection rate, last planned driving time, driving interval.
- * If not using impulsive driving, then the time quantities above are for 
+ * If not using impulsive driving, then the time quantities above are for
  * computing a new spectrum, not driving */
 static Real dedt,tdrive,dtdrive;
 /* Driving properties */
@@ -168,7 +168,7 @@ static Real mass;
 /* Apply a density floor - useful for large |z| regions */
 static Real D_FLOOR = 1.e-4;
 /* Flag to determine whether or not to employ outflow boundaries
-   in z 
+   in z
    zbc_out = 1 is outflow
    zbc_out = 0 is periodic or reflecting
 */
@@ -193,7 +193,7 @@ void problem(DomainS *pDomain)
 #ifdef MPI_PARALLEL
   long int iseed = myID_Comm_world; /* Initialize on the first call to ran2 */
   int ierr;
-#endif 
+#endif
 #ifdef PARTICLE_SELF_GRAVITY
   four_pi_G_par = par_getd_def("problem","four_pi_G_par",1.0);
 #endif
@@ -201,10 +201,10 @@ void problem(DomainS *pDomain)
   if (pDomain->Nx[2] == 1) {
     ath_error("[par_strat3d]: par_strat3d only works for 3D problem.\n");
   }
-  
+
 #ifdef MPI_PARALLEL
   if (pDomain->NGrid[2] > 2) {
-    ath_error(   
+    ath_error(
   "[par_strat3d]: The z-domain can not be decomposed into more than 2 grids\n");
   }
 #endif
@@ -248,8 +248,8 @@ void problem(DomainS *pDomain)
   ipert = par_geti_def("problem","ipert",1);
   vsc1 = par_getd_def("problem","vsc1",0.05); /* in unit of iso_sound (N.B.!) */
   vsc2 = par_getd_def("problem","vsc2",0.0);
-  
-  alpha_in = par_getd_def("problem","alph_in",1.e-4);
+
+  alpha_in = par_getd_def("problem","alpha_in",1.e-4);
   kforce   = par_geti_def("problem","kforce",0);
 
   vsc1 = vsc1 * Iso_csound;
@@ -290,7 +290,7 @@ void problem(DomainS *pDomain)
       if (tstop0[i] < tscrit) grproperty[i].integrator = 3;
     }
   }
-  else { 
+  else {
     amin = par_getd("problem","amin");
     amax = par_getd("problem","amax");
 
@@ -312,7 +312,7 @@ void problem(DomainS *pDomain)
   /* particle scale height */
   Hparmax = par_getd("problem","hparmax"); /* in unit of gas scale height */
   Hparmin = par_getd("problem","hparmin");
-  for (i=0; i<npartypes; i++) 
+  for (i=0; i<npartypes; i++)
     ScaleHpar[i] = Hparmax*
                    exp(-i*log(Hparmax/Hparmin)/MAX(npartypes-1,1.0));
 
@@ -549,7 +549,7 @@ void problem_read_restart(MeshS *pM, FILE *fp)
   x3min = pM->RootMinX[2];
   x3max = pM->RootMaxX[2];
   Lz = x3max - x3min;
- 
+
   Lx_all = par_getd("domain1","x1max") - par_getd("domain1","x1min");
   Ly_all = par_getd("domain1","x2max") - par_getd("domain1","x2min");
   Lz_all = par_getd("domain1","x3max") - par_getd("domain1","x3min");
@@ -566,7 +566,7 @@ void problem_read_restart(MeshS *pM, FILE *fp)
   vsc1 = vsc1 * Iso_csound;
   vsc2 = vsc2 * Iso_csound;
 
-  alpha_in = par_getd_def("problem","alph_in",1.e-4);
+  alpha_in = par_getd_def("problem","alpha_in",1.e-4);
   kforce   = par_geti_def("problem","kforce",0);
 
   Npar  = (int)(sqrt(par_geti("particle","parnumgrid")));
@@ -688,7 +688,7 @@ static Real hst_rho_Vx_dVy(const GridS *pG,
 }
 
 /*----------------------------------------------------------------------------*/
-/*! \fn static Real expr_KE(const GridS *pG, const int i, const int j, 
+/*! \fn static Real expr_KE(const GridS *pG, const int i, const int j,
  *                          const int k)
  *  \brief Computes dens*(Vx^2+Vy^2+Vz^2)/2
  */
@@ -709,7 +709,7 @@ static Real expr_KE(const GridS *pG, const int i, const int j, const int k)
 }
 
 #ifdef ADIABATIC
-/*! \fn static Real hst_E_total(const GridS *pG, const int i, const int j, 
+/*! \fn static Real hst_E_total(const GridS *pG, const int i, const int j,
  *                              const int k)
  *  \brief total energy (including tidal potential). */
 static Real hst_E_total(const GridS *pG, const int i, const int j, const int k)
@@ -835,13 +835,13 @@ void Userwork_in_loop(MeshS *pM)
             }
           }
         }
-        
-        if (kforce == 0) { 
-   
+
+        if (kforce == 0) {
+
           amp_force = 4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
- 
+
           kx = 2.*PI/Lx_all; ky = 2.*PI/Ly_all; kz = 2.*PI/Lz_all;
-          
+
           iseedxx = pM->nstep*1;
           iseedxy = pM->nstep*3;
           iseedxz = pM->nstep*5;
@@ -849,11 +849,11 @@ void Userwork_in_loop(MeshS *pM)
           iseedyx = pM->nstep*2;
           iseedyy = pM->nstep*4;
           iseedyz = pM->nstep*6;
-          
+
           iseedzx = pM->nstep*9;
           iseedzy = pM->nstep*8;
           iseedzz = pM->nstep*7;
- 
+
           phixx = ran2(&iseedxx)*2.*PI;
           phixy = ran2(&iseedxy)*2.*PI;
           phixz = ran2(&iseedxz)*2.*PI;
@@ -866,12 +866,12 @@ void Userwork_in_loop(MeshS *pM)
           phizy = ran2(&iseedzy)*2.*PI;
           phizz = ran2(&iseedzz)*2.*PI;
 
-          for (k=pG->ks; k<=pG->ke; k++) { 
-          for (j=pG->js; j<=pG->je; j++) { 
-          for (i=pG->is; i<=pG->ie; i++) { 
-               
+          for (k=pG->ks; k<=pG->ke; k++) {
+          for (j=pG->js; j<=pG->je; j++) {
+          for (i=pG->is; i<=pG->ie; i++) {
+
             cc_pos(pG,i,j,k,&x1,&x2,&x3);
-            
+
             vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
             vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
             vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
@@ -879,9 +879,9 @@ void Userwork_in_loop(MeshS *pM)
             pG->U[k][j][i].M1 += pG->U[k][j][i].d*vx*pG->dt;
             pG->U[k][j][i].M2 += pG->U[k][j][i].d*vy*pG->dt;
             pG->U[k][j][i].M3 += pG->U[k][j][i].d*vz*pG->dt;
-            
-          }}}      
-        } 
+
+          }}}
+        }
 
   }}}
 
@@ -898,7 +898,7 @@ void Userwork_after_loop(MeshS *pM)
 {
   return;
 }
- 
+
 
 /*=========================== PRIVATE FUNCTIONS ==============================*/
 /*--------------------------------------------------------------------------- */
@@ -935,7 +935,7 @@ static Real VertGrav(const Real x1, const Real x2, const Real x3)
       z=x3-zbtm+ztop;
     else
       z=fabs(x3);
-    
+
       phi += 0.5*SQR(Omega_0*z);
 
       /* smooth the potential at domain edges */
@@ -947,14 +947,14 @@ static Real VertGrav(const Real x1, const Real x2, const Real x3)
 }
 
 /*! \fn static void strat_ix3(GridS *pG)
- *  \brief  Here is the lower z outflow boundary. 
+ *  \brief  Here is the lower z outflow boundary.
             The basic idea is that the pressure and density
-            are exponentially extrapolated in the ghost zones 
+            are exponentially extrapolated in the ghost zones
             assuming a constant temperature there (i.e., an
             isothermal atmosphere). The z velocity (NOT the
             momentum) are set to zero in the ghost zones in the
             case of the last lower physical zone having an inward
-            flow.  All other variables are extrapolated into the 
+            flow.  All other variables are extrapolated into the
             ghost zones with zero slope.
 */
 
@@ -1026,14 +1026,14 @@ static void strat_ix3(GridS *pG)
 }
 
 /*! \fn static void strat_ox3(GridS *pG)
- *  \brief  Here is the upper z outflow boundary. 
+ *  \brief  Here is the upper z outflow boundary.
             The basic idea is that the pressure and density
-            are exponentially extrapolated in the ghost zones 
+            are exponentially extrapolated in the ghost zones
             assuming a constant temperature there (i.e., an
             isothermal atmosphere). The z velocity (NOT the
             momentum) are set to zero in the ghost zones in the
             case of the last upper physical zone having an inward
-            flow.  All other variables are extrapolated into the 
+            flow.  All other variables are extrapolated into the
             ghost zones with zero slope.
 */
 
@@ -1284,7 +1284,7 @@ static void output_1d(MeshS *pM, OutputS *pOut)
 /* The parent sums the scal[] array.
  * Note that this assumes (dx1,dx2,dx3) = const. */
 
-#ifdef MPI_PARALLEL 
+#ifdef MPI_PARALLEL
   for(i1d=0; i1d<tot1d; i1d++){
     for (k=0; k<nzmx; k++) {
       my_out1d[k] = out1d[k][i1d];
@@ -1369,9 +1369,9 @@ return;
 /*----------------------------------------------------------------------------*/
 /*! \fn void MultiNSH(int n, Real *tstop, Real *mratio, Real etavk,
  *                   Real *uxNSH, Real *uyNSH, Real *wxNSH, Real *wyNSH)
- *  \brief Multi-species NSH equilibrium 
+ *  \brief Multi-species NSH equilibrium
  *
- * Input: # of particle types (n), dust stopping time and mass ratio array, and 
+ * Input: # of particle types (n), dust stopping time and mass ratio array, and
  *        drift speed etavk.
  * Output: gas NSH equlibrium velocity (u), and dust NSH equilibrium velocity
  *         array (w).
