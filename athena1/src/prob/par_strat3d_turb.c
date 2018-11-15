@@ -838,9 +838,14 @@ void Userwork_in_loop(MeshS *pM)
 
         if (kforce == 0) {
 
-          amp_force = 4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
+          // try driving in one fourth of the box
+          float factor = 4.0;
 
-          kx = 2.*PI/Lx_all; ky = 2.*PI/Ly_all; kz = 2.*PI/Lz_all;
+          amp_force = factor*4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
+
+          kx = 2.*PI/(Lx_all/factor);
+          ky = 2.*PI/(Ly_all/factor);
+          kz = 2.*PI/(Lz_all/factor);
 
           iseedxx = pM->nstep*1;
           iseedxy = pM->nstep*3;
@@ -871,15 +876,14 @@ void Userwork_in_loop(MeshS *pM)
           for (i=pG->is; i<=pG->ie; i++) {
 
             cc_pos(pG,i,j,k,&x1,&x2,&x3);
-
-            vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
-            vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
-            vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
-
-            pG->U[k][j][i].M1 += pG->U[k][j][i].d*vx*pG->dt;
-            pG->U[k][j][i].M2 += pG->U[k][j][i].d*vy*pG->dt;
-            pG->U[k][j][i].M3 += pG->U[k][j][i].d*vz*pG->dt;
-
+            if (fabs(x3)<(Lz_all/factor)) {
+              vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
+              vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
+              vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
+              pG->U[k][j][i].M1 += pG->U[k][j][i].d*vx*pG->dt;
+              pG->U[k][j][i].M2 += pG->U[k][j][i].d*vy*pG->dt;
+              pG->U[k][j][i].M3 += pG->U[k][j][i].d*vz*pG->dt;
+            }
           }}}
         }
 
