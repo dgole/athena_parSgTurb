@@ -876,7 +876,7 @@ void Userwork_in_loop(MeshS *pM)
           for (i=pG->is; i<=pG->ie; i++) {
 
             cc_pos(pG,i,j,k,&x1,&x2,&x3);
-            if (fabs(x3)<(Lz_all/factor)) {
+            if (fabs(x3)<(Lz_all/(factor*2.))) {
               vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
               vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
               vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
