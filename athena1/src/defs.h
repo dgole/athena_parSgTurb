@@ -20,7 +20,7 @@
  *  (user modified via configure) */
 
 /* Version identifier when configure was last run */
-#define CONFIGURE_DATE "Thu Nov  1 13:55:18 CDT 2018"
+#define CONFIGURE_DATE "Thu Nov 15 13:38:53 CST 2018"
 
 /* Problem generator with which Athena is compiled */
 #define A_PROBLEM "par_strat3d_turb"

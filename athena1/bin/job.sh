@@ -1,11 +1,13 @@
 #!/bin/bash
 
-#SBATCH -J testParticles
+#SBATCH -J midTest
+##SBATCH --time=48:00:00
 #SBATCH --time=1:00:00
 #SBATCH -N 1
 #SBATCH --ntasks 64
 #SBATCH -o out_%j.txt
 #SBATCH -e error_%j.txt
+##SBATCH -p normal
 #SBATCH -p development
 
 # The following commands will be executed when this script is run.
