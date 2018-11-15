@@ -1,0 +1,39 @@
+ath_fft.o: ath_fft.c ../defs.h ../athena.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ ../prototypes.h ../copyright.h ../config.h ../fftsrc/prototypes.h \
+ ../fftsrc/fft_3d.h /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h \
+ ../gravity/prototypes.h ../gravity/../copyright.h ../gravity/../config.h \
+ ../integrators/prototypes.h ../integrators/../copyright.h \
+ ../integrators/../config.h ../microphysics/prototypes.h \
+ ../microphysics/../copyright.h ../microphysics/../config.h \
+ ../particles/prototypes.h ../particles/../copyright.h ../particles/../config.h \
+ ../reconstruction/prototypes.h ../reconstruction/../copyright.h \
+ ../reconstruction/../config.h ../rsolvers/prototypes.h \
+ ../rsolvers/../copyright.h ../rsolvers/../config.h ../globals.h fft_2d.h
+factor.o: factor.c
+fft_2d.o: fft_2d.c \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ pack_2d.h remap_2d.h fft_2d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h
+fft_3d.o: fft_3d.c \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ pack_3d.h remap_3d.h fft_3d.h \
+ /opt/apps/intel17/impi17_0/fftw3/3.3.6/include/fftw3.h
+pack_2d.o: pack_2d.c pack_2d.h
+pack_3d.o: pack_3d.c pack_3d.h
+remap_2d.o: remap_2d.c \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ pack_2d.h remap_2d.h
+remap_3d.o: remap_3d.c \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpio.h \
+ /opt/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/include/mpi.h \
+ pack_3d.h remap_3d.h
