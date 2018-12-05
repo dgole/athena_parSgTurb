@@ -172,7 +172,7 @@ static Real D_FLOOR = 1.e-4;
    zbc_out = 1 is outflow
    zbc_out = 0 is periodic or reflecting
 */
-static int zbc_out = 1;
+static int zbc_out = 0;
 
 /*=========================== PUBLIC FUNCTIONS =================================
  *============================================================================*/
@@ -839,9 +839,10 @@ void Userwork_in_loop(MeshS *pM)
         if (kforce == 0) {
 
           // try driving in one fourth of the box
-          float factor = 4.0;
+          //float factor = 4.0;
+          //amp_force = factor*4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
 
-          amp_force = factor*4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
+          amp_force = 4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
 
           kx = 2.*PI/(Lx_all/factor);
           ky = 2.*PI/(Ly_all/factor);
@@ -876,14 +877,22 @@ void Userwork_in_loop(MeshS *pM)
           for (i=pG->is; i<=pG->ie; i++) {
 
             cc_pos(pG,i,j,k,&x1,&x2,&x3);
-            if (fabs(x3)<(Lz_all/(factor*2.))) {
+
+            /*if (fabs(x3)<(Lz_all/(factor*2.))) {
               vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
               vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
               vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
               pG->U[k][j][i].M1 += pG->U[k][j][i].d*vx*pG->dt;
               pG->U[k][j][i].M2 += pG->U[k][j][i].d*vy*pG->dt;
               pG->U[k][j][i].M3 += pG->U[k][j][i].d*vz*pG->dt;
-            }
+            }*/
+            vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
+            vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
+            vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
+            pG->U[k][j][i].M1 += pG->U[k][j][i].d*vx*pG->dt;
+            pG->U[k][j][i].M2 += pG->U[k][j][i].d*vy*pG->dt;
+            pG->U[k][j][i].M3 += pG->U[k][j][i].d*vz*pG->dt;
+
           }}}
         }
 
