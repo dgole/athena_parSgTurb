@@ -844,9 +844,12 @@ void Userwork_in_loop(MeshS *pM)
 
           amp_force = 4.*sqrt(0.22*alpha_in*(1./Omega_0)/(Lx_all*Ly_all*Lz_all));
 
-          kx = 2.*PI/(Lx_all/factor);
-          ky = 2.*PI/(Ly_all/factor);
-          kz = 2.*PI/(Lz_all/factor);
+          //kx = 2.*PI/(Lx_all/factor);
+          //ky = 2.*PI/(Ly_all/factor);
+          //kz = 2.*PI/(Lz_all/factor);
+          kx = 2.*PI/(Lx_all);
+          ky = 2.*PI/(Ly_all);
+          kz = 2.*PI/(Lz_all);
 
           iseedxx = pM->nstep*1;
           iseedxy = pM->nstep*3;
