@@ -23,7 +23,7 @@ dt      = 0.1                # time step between output
 
 <output3>
 out_fmt = rst                # restart dump
-dt      = 1.                 # time step between output
+dt      = 1.0                 # time step between output
 num     = 0
 
 <output4>
@@ -59,7 +59,7 @@ dt      = 1.0
 
 cour_no         = 0.4      # The Courant, Friedrichs, & Lewy (CFL) Number
 nlim            = 1000000  # cycle limit
-tlim            = 62900      # time limit
+tlim            = 315      # time limit
 
 <domain1>
 level           = 0
@@ -109,9 +109,9 @@ amin            = 1.0       # minimum particle size
 amax            = 1.0       # maximum particle size
 rhoaconv        = 1.0       # conversion factor for rhoa
 alamcoeff       = 1.0       # coefficient for calculating a*lambda
-mratio          = 5.e-6      # total particle to gas mass ratio
+mratio          = 5.e-2      # total particle to gas mass ratio
 pwind           = 1.0       # power law index of particle mass distribution
-four_pi_G_par   = 5.e2       # strength of gravity for particle self-gravity
+four_pi_G_par   = 5.e-2       # strength of gravity for particle self-gravity
 
 vsc1            = 0.05      # velocity shift due to pressure gradient
 vsc2            = 0.0       # quadratic coefficient of velocity shift
