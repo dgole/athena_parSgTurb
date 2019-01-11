@@ -871,7 +871,7 @@ void Userwork_in_loop(MeshS *pM)
           for (i=pG->is; i<=pG->ie; i++) {
 
             cc_pos(pG,i,j,k,&x1,&x2,&x3);
-            
+
             vx = amp_force*(sin(kx*x1+phixx)*sin(ky*x2+phiyx)*sin(kz*x3+phizx));
             vy = amp_force*(sin(kx*x1+phixy)*sin(ky*x2+phiyy)*sin(kz*x3+phizy));
             vz = amp_force*(sin(kx*x1+phixz)*sin(ky*x2+phiyz)*sin(kz*x3+phizz));
@@ -919,31 +919,32 @@ static Real UnstratifiedDisk(const Real x1, const Real x2, const Real x3)
  *  \brief potential for vertical component of gravity */
 static Real VertGrav(const Real x1, const Real x2, const Real x3)
 {
-  Real phi=0.0,z,z0;
+   Real phi=0.0,z,z0;
 
-/* If outflow boundaries are used in z, we just use the normal
-   z potential.  Otherwise, we ensure periodicity and also
-   smooth the potential near the vertical boundaries */
+   /* If outflow boundaries are used in z, we just use the normal
+      z potential.  Otherwise, we ensure periodicity and also
+      smooth the potential near the vertical boundaries */
 
-  if (zbc_out == 1) {
-    z = x3;
-    phi += 0.5*Omega_0*Omega_0*z*z;
-  } else {
-    if(x3 > ztop)
-      z=x3-ztop+zbtm;
-    else if (x3 < zbtm)
-      z=x3-zbtm+ztop;
-    else
-      z=fabs(x3);
+   if (zbc_out == 1) {
+       z = x3;
+       phi += 0.5*Omega_0*Omega_0*z*z;
+   } else {
+       if(x3 > ztop)
+           z=x3-ztop+zbtm;
+       else if (x3 < zbtm)
+           z=x3-zbtm+ztop;
+       else
+           z=x3;
 
-      phi += 0.5*SQR(Omega_0*z);
+       phi += 0.5*SQR(Omega_0*z);
 
-      /* smooth the potential at domain edges */
-      z0 = 0.5*Lz+Lg;
-      phi -= SQR(Omega_0*Lg)*Lg*(2.0*z-z0)/(2.0*SQR(z0-z)); /* 3rd order sharp */
-//  phi -= SQR(Omega_0*Lg)*(z/(z0-z)+log(z0/(z0-z))); /* 2nd order sharp */
-  }
-  return phi;
+       /* smooth the potential at domain edges */
+       z0 = 0.5*Lz+Lg;
+       z = fabs(z); // RL: fix a bug: add fabs() to calcualte correct potential
+       phi -= SQR(Omega_0*Lg)*Lg*(2.0*z-z0)/(2.0*SQR(z0-z)); /* 3rd order sharp */
+       //  phi -= SQR(Omega_0*Lg)*(z/(z0-z)+log(z0/(z0-z))); /* 2nd order sharp */
+   }
+   return phi;
 }
 
 /*! \fn static void strat_ix3(GridS *pG)
