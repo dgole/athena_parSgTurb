@@ -109,7 +109,7 @@ amin            = 1.0       # minimum particle size
 amax            = 1.0       # maximum particle size
 rhoaconv        = 1.0       # conversion factor for rhoa
 alamcoeff       = 1.0       # coefficient for calculating a*lambda
-mratio          = 5.e-2      # total particle to gas mass ratio
+mratio          = 2.e-2      # total particle to gas mass ratio
 pwind           = 1.0       # power law index of particle mass distribution
 four_pi_G_par   = 5.e-2       # strength of gravity for particle self-gravity
 
