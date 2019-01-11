@@ -172,7 +172,7 @@ static Real D_FLOOR = 1.e-4;
    zbc_out = 1 is outflow
    zbc_out = 0 is periodic or reflecting
 */
-static int zbc_out = 1;
+static int zbc_out = 0;
 
 /*=========================== PUBLIC FUNCTIONS =================================
  *============================================================================*/
