@@ -100,8 +100,8 @@ tshuf           = 1.e20     # time interval to shuffle the particles
 omega           = 1.0       # angular velocity of rotation
 iso_csound      = 1.0       # sound speed
 
-tsmin           = 0.1      # stopping time for smallest particles
-tsmax           = 0.1      # stopping time for largest particles
+tsmin           = 0.3      # stopping time for smallest particles
+tsmax           = 0.3      # stopping time for largest particles
 tscrit          = 0.01      # critical stopping time below which needs to switch integrator
 hparmax         = 0.02      # initial scaleheight for smallest particles
 hparmin         = 0.02      # initial scaleheight for largest particles
