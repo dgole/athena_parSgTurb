@@ -98,7 +98,7 @@ tshuf           = 1.e20     # time interval to shuffle the particles
 <problem>
 
 omega           = 1.0       # angular velocity of rotation
-iso_csound      = 0.707106781186       # sound speed
+iso_csound      = 1.0       # sound speed
 
 tsmin           = 0.1      # stopping time for smallest particles
 tsmax           = 0.1      # stopping time for largest particles
