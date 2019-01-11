@@ -35,7 +35,7 @@ par_prop = limit             # user defined particle selection function
 
 <output5>
 out_fmt = vtk                # vtk dump
-dt      = 1.                # time step between output
+dt      = 1.0                # time step between output
 num     = 0
 
 <output6>
@@ -63,25 +63,25 @@ tlim            = 62900      # time limit
 
 <domain1>
 level           = 0
-Nx1             = 128        # Number of zones in X-direction
-x1min           = -0.1      # minimum value of X 
+Nx1             = 64        # Number of zones in X-direction
+x1min           = -0.1      # minimum value of X
 x1max           = 0.1       # maximum value of X
 bc_ix1          = 4         # inner-I (X) boundary flag (periodic)
 bc_ox1          = 4         # outer-I (X) boundary flag (periodic)
 NGrid_x1        = 8
 
-Nx2             = 128      # Number of zones in X2-direction
+Nx2             = 64      # Number of zones in X2-direction
 x2min           = -0.1      # minimum value of X2
 x2max           = 0.1       # maximum value of X2
 bc_ix2          = 4         # inner-J (Y) boundary flag (periodic)
 bc_ox2          = 4         # outer-J (Y) boundary flag (periodic)
 NGrid_x2        = 4
 
-Nx3             = 128      # Number of zones in X3-direction
+Nx3             = 64      # Number of zones in X3-direction
 x3min           = -0.1      # minimum value of X3
 x3max           = 0.1      # maximum value of X3
-bc_ix3          = 2         # inner-K (Z) boundary flag (periodic)
-bc_ox3          = 2         # outer-K (Z) boundary flag (periodic)
+bc_ix3          = 4         # inner-K (Z) boundary flag (periodic)
+bc_ox3          = 4         # outer-K (Z) boundary flag (periodic)
 NGrid_x3        = 2
 
 <particle>
@@ -98,7 +98,7 @@ tshuf           = 1.e20     # time interval to shuffle the particles
 <problem>
 
 omega           = 1.0       # angular velocity of rotation
-iso_csound      = 1.0       # sound speed
+iso_csound      = 0.707106781186       # sound speed
 
 tsmin           = 0.1      # stopping time for smallest particles
 tsmax           = 0.1      # stopping time for largest particles
@@ -109,19 +109,19 @@ amin            = 1.0       # minimum particle size
 amax            = 1.0       # maximum particle size
 rhoaconv        = 1.0       # conversion factor for rhoa
 alamcoeff       = 1.0       # coefficient for calculating a*lambda
-mratio          = 0.05      # total particle to gas mass ratio
+mratio          = 5.e-6      # total particle to gas mass ratio
 pwind           = 1.0       # power law index of particle mass distribution
-four_pi_G_par   = 0.05       # strength of gravity for particle self-gravity
+four_pi_G_par   = 5.e2       # strength of gravity for particle self-gravity
 
 vsc1            = 0.05      # velocity shift due to pressure gradient
 vsc2            = 0.0       # quadratic coefficient of velocity shift
 ipert           = 1         # perturbation mode (0: accurate nsh velocity; 1: zero velocity);
 
-ntrack          = 8         # number of particles for tracking
-nlis            = 256       # number of particles in the particle list output
+#ntrack          = 8         # number of particles for tracking
+#nlis            = 256       # number of particles in the particle list output
 
 kforce          = 0         # whether forcing is done in k space (1: forcing in k space)
-alpha_in        = 1.e-2     # input alpha (only for kforce = 0)
+alpha_in        = 1.e-4     # input alpha (only for kforce = 0)
 
 dedt            = 9.e-5    # energy input rate
 dtdrive         = 0.001     # time interval between drive
@@ -131,4 +131,3 @@ kpeak           = 2.0       # peak k for G&O spectrum
 expo            = 0.3333333       # exponent for power-law spectrum
 ispect          = 1         # power-law=1, G&O=2
 idrive          = 0         # driven=0, decaying=1
-
